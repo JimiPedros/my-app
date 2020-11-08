@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.back-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

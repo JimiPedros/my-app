@@ -26,6 +26,7 @@ function App() {
   const onClickBack = (): void =>  {
     setSelectedMovie(undefined)
     setMovieDetails(undefined)
+    setSearchResults([])
   }
 
   useEffect(() => {
@@ -46,9 +47,10 @@ function App() {
 
   // Alternative Lazy Option ¯\_(ツ)_/¯¯
   // useEffect(() => {
-  //   inputValue && fetch(`https://api.themoviedb.org/3/search/movie?query=${inputValue}&api_key=0a754449f6a55255156338eb634ae83d&language=en-US`)
+  //   inputValue && fetch(`url`)
   //     .then(r => r.json())
   //     .then(r => setSearchResults(r.results))
+  //     .catch(e => do some error handling stuff)
   // }, [inputValue]);
 
   useEffect(() => {
@@ -59,14 +61,16 @@ function App() {
     <div className="App">
 
       { selectedMovie &&
-        <div onClick={() => onClickBack()}>back</div>
+        <div className='back-button' onClick={() => onClickBack()}>Back to search</div>
       }
 
-      <LandingPage
-        searchResults={searchResults}
-        onChangeSearch={handleOnChangeSearch}
-        onClickMovie={handleOnClickMovie}
-      />
+      { !selectedMovie &&
+        <LandingPage
+          searchResults={searchResults}
+          onChangeSearch={handleOnChangeSearch}
+          onClickMovie={handleOnClickMovie}
+        />
+      }
 
       { movieDetails &&
         <DetailsPage movie={movieDetails}/>

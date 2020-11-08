@@ -24,18 +24,14 @@ export class MovieService implements MovieServiceInt {
 
     public async searchByTitle(title: string): Promise<Array<Movie>> {
         const url = this.createAPIEndpoint(`search/movie`, title)
-
         try {
             const response = await axios.get<PageResponse<Movie>>(url)
             // @ts-ignore
             return response.data.results
-
         } catch (error) {
-
             if (error && error.status_message) {
                 throw new Error(error.status_message)
             }
-
             console.error(error)
             throw new Error('An error occurred.')
         }
@@ -43,18 +39,14 @@ export class MovieService implements MovieServiceInt {
 
     public async getMovieDetails(id: number): Promise<MovieDetails> {
         const url = this.createAPIEndpoint(`movie/${id}`)
-
         try {
             const response = await axios.get<MovieDetails>(url)
             // @ts-ignore
             return response.data
-
         } catch (error) {
-
             if (error && error.status_message) {
                 throw new Error(error.status_message)
             }
-
             console.error(error)
             throw new Error('An error occurred.')
         }
@@ -62,11 +54,9 @@ export class MovieService implements MovieServiceInt {
 
     private createAPIEndpoint(method: string, query?: string): string {
         let url = serviceBaseUrl + method + `?api_key=${apiKey}&language=en-US`
-
         if (query) {
             url = url + `&query=${query}`
         }
-
         return url
     }
 }

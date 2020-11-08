@@ -1,0 +1,30 @@
+.search-input {
+  border: 1px solid lightgray;
+  width: 50%;
+  margin: auto;
+  padding: 8px;
+  font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.dropdown-item {
+  border: 1px solid lightgray;
+  width: 50%;
+  margin: auto;
+  padding: 4px;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container {
+  box-sizing: border-box;
+}
+.boxes {
+  float: left;
+  width: 33.33%;
+}
