@@ -18,7 +18,7 @@ function LandingPage(props: Props) {
         placeholder='Search movie'
       />
 
-      { props.searchResults.map((m) =>
+      { props.searchResults.slice(0,6).map((m) =>
         <div
           className='dropdown-item'
           onClick={() => props.onClickMovie(m)}
