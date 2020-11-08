@@ -11,16 +11,25 @@ function LandingPage(props: Props) {
   return (
     <div className="LandingPage">
       <h1>Landing Page</h1>
+
       <input
-        className='search-input'
+        id='search-input'
         onChange={props.onChangeSearch}
-        placeholder='Enter a movie title'
+        placeholder='Search movie'
       />
+
       { props.searchResults.map((m) =>
-        <div className='dropdown-item' onClick={() => props.onClickMovie(m)}>{m.title}</div>)
-      }
+        <div
+          className='dropdown-item'
+          onClick={() => props.onClickMovie(m)}
+          key={m.id}
+        >
+          {m.title}
+        </div>
+      )}
+
     </div>
-  );
+  )
 }
 
-export default LandingPage;
+export default LandingPage
