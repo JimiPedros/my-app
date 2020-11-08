@@ -1,7 +1,7 @@
-import { PageResponse } from '../types/PageResponse';
-import { Movie } from '../types/Movie';
-import { MovieDetails } from '../types/MovieDetails';
-import { serviceBaseUrl, apiKey } from '../types/Constants';
+import { PageResponse } from '../types/PageResponse'
+import { Movie } from '../types/Movie'
+import { MovieDetails } from '../types/MovieDetails'
+import { serviceBaseUrl, apiKey } from '../types/Constants'
 import axios from 'axios'
 
 export interface MovieServiceInt {

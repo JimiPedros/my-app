@@ -1,6 +1,6 @@
-import React from 'react';
-import { MovieDetails } from '../types/MovieDetails';
-import './styles.css';
+import React from 'react'
+import { MovieDetails } from '../types/MovieDetails'
+import './styles.css'
 
 function DetailsPage(props: { movie: MovieDetails }) {
   return (
@@ -21,7 +21,7 @@ function DetailsPage(props: { movie: MovieDetails }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default DetailsPage;
+export default DetailsPage

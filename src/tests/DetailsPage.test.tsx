@@ -1,6 +1,6 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import DetailsPage from '../components/DetailsPage';
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import DetailsPage from '../components/DetailsPage'
 
 test('renders the correct movie details', () => {
 
@@ -12,17 +12,17 @@ test('renders the correct movie details', () => {
   }
 
   //@ts-ignore
-  render(<DetailsPage movie={m}/>);
+  render(<DetailsPage movie={m}/>)
 
-  const title = screen.getByText(m.title);
-  expect(title).toBeInTheDocument();
+  const title = screen.getByText(m.title)
+  expect(title).toBeInTheDocument()
 
-  const tagline = screen.getByText(m.tagline);
-  expect(tagline).toBeInTheDocument();
+  const tagline = screen.getByText(m.tagline)
+  expect(tagline).toBeInTheDocument()
 
-  const runtime = screen.getByText(m.runtime.toString());
-  expect(runtime).toBeInTheDocument();
+  const runtime = screen.getByText(m.runtime.toString())
+  expect(runtime).toBeInTheDocument()
 
-  const releaseDate = screen.getByText(m.release_date);
-  expect(releaseDate).toBeInTheDocument();
-});
+  const releaseDate = screen.getByText(m.release_date)
+  expect(releaseDate).toBeInTheDocument()
+})

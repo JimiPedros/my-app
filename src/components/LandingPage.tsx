@@ -1,5 +1,5 @@
-import React from 'react';
-import { Movie } from '../types/Movie';
+import React from 'react'
+import { Movie } from '../types/Movie'
 
 type Props = {
   onClickMovie: (m: Movie) => void

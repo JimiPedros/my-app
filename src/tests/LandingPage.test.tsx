@@ -1,7 +1,7 @@
-import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
-import LandingPage from '../components/LandingPage';
-import { Movie } from '../types/Movie';
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import LandingPage from '../components/LandingPage'
+import { Movie } from '../types/Movie'
 test('renders the landing page correctly', () => {
 
   const movies = ([
@@ -21,9 +21,9 @@ test('renders the landing page correctly', () => {
     />
   )
 
-  const title = screen.getByText('foo');
-  expect(title).toBeInTheDocument();
+  const title = screen.getByText('foo')
+  expect(title).toBeInTheDocument()
 
   title.click()
-  expect(onClickMovieMock).toBeCalledWith({id: 1, title: 'foo'});
-});
+  expect(onClickMovieMock).toBeCalledWith({id: 1, title: 'foo'})
+})
