@@ -23,8 +23,14 @@
 
 .container {
   box-sizing: border-box;
+  margin: auto;
 }
 .boxes {
-  float: left;
-  width: 33.33%;
+  display: inline-block;
+  width: 30%;
+  margin: 5px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  min-height: 200px;
+  vertical-align: middle;
 }

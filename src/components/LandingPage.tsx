@@ -9,8 +9,8 @@ type Props = {
 
 function LandingPage(props: Props) {
   return (
-    <div className="LandingPage">
-      <h1>Landing Page</h1>
+    <div className="landing-page">
+      <h1 className='landing-header'>Landing Page</h1>
 
       <input
         id='search-input'
